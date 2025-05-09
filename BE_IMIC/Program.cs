@@ -13,7 +13,7 @@ namespace IMIC_LuyenTap
             Console.WriteLine("Nhập số A: ");
             int a = int.Parse(Console.ReadLine()!);
             Console.WriteLine("Nhập số B: ");
-            int b = int.Parse(Console.ReadLine()!);
+            int b = int.Parse(Console.ReadLine()!); 
             TinhToan(a, b);
 
             //Buổi 3:
