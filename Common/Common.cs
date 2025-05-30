@@ -14,5 +14,21 @@ namespace IMIC_LuyenTap.Common
             if (value.Contains("<html>")) return false;
             return true;
         }
+        public bool GetSafeInput(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                Console.WriteLine("Không được để trống!");
+                return false;
+            }
+
+            if (value.Contains("<") || value.Contains(">") || value.Contains("\""))
+            {
+                Console.WriteLine("Dữ liệu không hợp lệ!");
+                return false;
+            }
+
+            return true;
+        }
     }
 }
